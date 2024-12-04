@@ -1,0 +1,18 @@
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+}
+/* Utility classes */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}

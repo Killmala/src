@@ -1,0 +1,62 @@
+/* src/components/TopBar.css */
+
+.top-bar {
+  position: fixed; /* Fixes the TopBar at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Set consistent height for TopBar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spreads items across the bar */
+  padding: 0 20px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  z-index: 1000; /* Keeps it on top of other elements */
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.3); /* Optional: adds subtle shadow */
+}
+
+.website-name {
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.website-name h1 {
+  margin: 0;
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+}
+
+.search-container {
+  flex-grow: 1; /* Allows the search container to grow */
+  margin: 0 0px; /* Adjusts spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-right > * {
+  margin-left: 20px; /* Space between right-side elements */
+}
+
+.content-option button,
+.upload-button {
+  color: hsl(0, 0%, 100%);
+  background-color: transparent;
+  border: none;
+  font-size: 16px; /* Adjusted for better fit */
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.content-option button:hover,
+.upload-button:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: hsl(0, 0%, 90%);
+}

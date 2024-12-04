@@ -1,0 +1,137 @@
+/* src/components/RightSidebar.css */
+
+/* CSS Variables for Maintainability */
+:root {
+  --sidebar-bg: hsl(0, 0%, 10%);
+  --overlay-bg: hsla(0, 0%, 10%, 0.8);
+  --overlay-blur: 12px;
+  --message-text-color: white;
+  --transition-duration: 0.3s;
+  --preference-heading-color: hsl(0, 0%, 100%);
+  --label-color: hsl(0, 0%, 100%);
+  --input-bg: transparent;
+  --input-border: 2px solid hsl(0, 0%, 100%);
+  --input-checked-bg: hsl(120, 100%, 25%);
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+  position: fixed;
+  top: 50px; /* Height of TopBar */
+  right: 0;
+  width: 200px; /* Increased width for better content accommodation */
+  height: calc(100vh - 50px);
+  padding: 20px;
+  background-color: var(--sidebar-bg); /* Dark background */
+  overflow-y: auto;
+  backdrop-filter: blur(10px); /* Smooth blurred effect */
+  color: white;
+  z-index: 998; /* Just below LeftSidebar and TopBar */
+  transition: transform var(--transition-duration) ease;
+}
+
+/* Hidden Sidebar (if needed for future toggling) */
+.right-sidebar.hidden {
+  transform: translateX(100%);
+}
+
+/* Translucent Overlay Styles */
+.translucent-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-bg); /* Dark translucent overlay */
+  backdrop-filter: blur(var(--overlay-blur)); /* Slightly stronger blur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Message Container Styles */
+.message-container {
+  color: var(--message-text-color);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 8px;
+}
+
+/* Login Message Styles */
+.login-message {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Preferences Container */
+.preferences-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Preference Headings */
+.preferences-container h2,
+.preferences-container h3 {
+  color: var(--preference-heading-color);
+  margin-bottom: 10px;
+}
+
+/* Rank Up Section */
+.rank-up {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rank-up label {
+  color: var(--label-color);
+  font-size: 14px;
+}
+
+.rank-up input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background-color: var(--input-bg);
+  border: var(--input-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease;
+}
+
+.rank-up input[type="checkbox"]:checked {
+  background-color: var(--input-checked-bg);
+}
+
+/* Customize Feed Section */
+.customize-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--label-color);
+  font-size: 14px;
+}
+
+.checkbox-list input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  background-color: var(--input-bg);
+  border: var(--input-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease;
+}
+
+.checkbox-list input[type="checkbox"]:checked {
+  background-color: var(--input-checked-bg);
+}

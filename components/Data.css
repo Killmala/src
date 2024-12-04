@@ -1,0 +1,129 @@
+/* src/components/Data.css */
+/* Container for the entire Data component */
+/* Container for the entire Data component */
+.Data {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 10px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+/* Website Data Section */
+.Website-Data {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Metric Bars inside Website Data */
+.Metric-Bars .metric-bar {
+  background-color: #6a5b8a; /* Purple color for metric bars */
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.metric-bar-1,
+.metric-bar-2 {
+  background-color: #6a5b8a; /* Consistent purple */
+}
+
+.metric-bar:hover {
+  background-color: #5c4e7a; /* Darker purple on hover */
+}
+
+/* User Data Section */
+.User-Data {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 25%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Stats Section */
+.General-Stats {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: hsl(0, 0%, 85%); /* Light color for readability */
+}
+
+.General-Stats p {
+  margin: 10px 0;
+}
+
+/* User Stats Section */
+.User-Stats .user-growth-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #6a5b8a; /* Purple background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.user-growth-circle:hover {
+  background-color: #5c4e7a; /* Darker purple on hover */
+}
+
+/* Stat Box in User Data */
+.User-Data .stat-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: hsl(0, 0%, 30%);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box p {
+  margin: 0;
+  color: hsl(0, 0%, 90%);
+}
+
+.stat-box span {
+  font-weight: bold;
+  color: hsl(0, 0%, 95%);
+}
+
+/* Responsive Design: Adjust the layout on smaller screens */
+@media (max-width: 768px) {
+  .Data {
+    flex-direction: column;
+  }
+
+  .Website-Data,
+  .User-Data {
+    width: 100%;
+  }
+
+  .Metric-Bars .metric-bar {
+    height: 50px; /* Increase height on smaller screens for better visibility */
+  }
+
+  .user-growth-circle {
+    width: 100px;
+    height: 100px;
+  }
+}

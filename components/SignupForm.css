@@ -1,0 +1,121 @@
+/* src/components/SignupForm.css */
+
+/* Container Styles */
+.signup-container {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.signup-container h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Form Styles */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.signup-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.signup-form input::placeholder {
+  color: #777;
+}
+
+/* Button Styles */
+.signup-form button {
+  padding: 12px;
+  background-color: #4caf50; /* Green */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #45a049;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4d4d; /* Red color for errors */
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+.password-strength.weak {
+  color: #ff4d4d; /* Red for weak passwords */
+}
+
+.password-strength.medium {
+  color: #ffa500; /* Orange for medium passwords */
+}
+
+.password-strength.strong {
+  color: #4caf50; /* Green for strong passwords */
+}
+
+/* Small Text */
+.signup-form small {
+  color: #cccccc;
+  font-size: 12px;
+}
+
+/* Success Message */
+.success-message {
+  color: #4caf50;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Login Option Link */
+.login-option {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-option a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.login-option a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .signup-form {
+    width: 100%;
+  }
+
+  .signup-form button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+/* src/components/Layout.css */
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 10%);
+}
+
+/* Main Content Area */
+.layout-content {
+  margin-top: 50px; /* Height of TopBar */
+  margin-left: 100px; /* Width of LeftSidebar */
+  margin-right: 150px; /* Width of RightSidebar (default when visible) */
+  padding: 20px;
+  overflow-y: auto;
+  transition: margin-right 0.3s ease; /* Smooth transition when sidebar toggles */
+}
+
+/* Adjust margin when Right Sidebar is hidden */
+.layout-content.no-right-sidebar {
+  margin-right: 0;
+}

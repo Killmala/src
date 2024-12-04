@@ -1,0 +1,61 @@
+/* src/components/LeftSidebar.css */
+
+/* CSS Variables for Maintainability */
+:root {
+  --sidebar-bg: hsl(0, 0%, 10%);
+  --sidebar-hover-bg: hsl(0, 0%, 15%);
+  --sidebar-active-bg: hsl(0, 0%, 5%);
+  --nav-item-color: hsl(0, 0%, 90%);
+  --nav-item-hover-color: hsl(0, 0%, 100%);
+  --nav-item-active-color: hsl(0, 0%, 100%);
+  --transition-duration: 0.3s;
+}
+
+/* Left Sidebar Styles */
+.left-sidebar {
+  position: fixed;
+  top: 50px; /* Height of TopBar */
+  left: 0;
+  width: 100px;
+  height: calc(100vh - 50px); /* Full height minus TopBar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sidebar-bg);
+  z-index: 999; /* Just below TopBar */
+  transition: width var(--transition-duration) ease;
+  overflow: hidden;
+}
+
+/* Navigation Link Styles */
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  color: var(--nav-item-color);
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+/* Active NavLink */
+.nav-item.active {
+  background-color: var(--sidebar-active-bg);
+  color: var(--nav-item-active-color);
+}
+
+/* Hover Effect */
+.nav-item:hover {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--nav-item-hover-color);
+}
+
+/* Focus State for Accessibility */
+.nav-item:focus {
+  outline: 2px solid var(--nav-item-active-color);
+  outline-offset: -2px;
+}

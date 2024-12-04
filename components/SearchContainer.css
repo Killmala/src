@@ -1,0 +1,50 @@
+
+.search-box {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 10%); /* Set background color to white */
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 25px; /* Rounded corners for a single bar look */
+  overflow: hidden;
+  box-shadow: 0 2px 5px #00000026; /* Add subtle shadow */
+}
+
+.mic-button,
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mic-button img,
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.search-input {
+  color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 10%);
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex-grow: 1; /* Take up available space */
+}
+
+.search-box input::placeholder {
+  color: hsl(0, 0%, 80%);
+}
+
+.mic-button {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
