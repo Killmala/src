@@ -13,7 +13,6 @@ const TopBar = ({ onUploadClick, showUploadButton, onToggleSidebar }) => {
       <SearchContainer />
       <div className="top-bar-right">
         <UserOption />
-        {/* Render either the upload button or sidebar toggle */}
         {showUploadButton ? (
           <div className="upload-button-container">
             <button onClick={onUploadClick} className="upload-button">
@@ -26,7 +25,8 @@ const TopBar = ({ onUploadClick, showUploadButton, onToggleSidebar }) => {
           </div>
         ) : (
           <div className="content-option" id="Sub-bar">
-            <button onClick={onToggleSidebar}>&#9776;</button> {/* Sidebar toggle button */}
+            {/* Sidebar toggle button. Ensure it triggers onToggleSidebar */}
+            <button onClick={onToggleSidebar}>&#9776;</button>
           </div>
         )}
       </div>

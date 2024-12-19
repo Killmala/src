@@ -1,59 +1,49 @@
-/* src/components/Layout.js */
-import React, { useState, useEffect } from "react";
+// src/components/Layout.js
+import React, { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
 import LeftSidebar from "./LeftSidebar";
 import RightSidebar from "./RightSidebar";
-import "./Layout.css"; // Import styles for Layout
+import "./Layout.css";
 
 const Layout = () => {
   const location = useLocation();
-  const isEconPage = location.pathname === "/econ"; // Conditionally control UI behavior
-  const [isRightSidebarVisible, setRightSidebarVisible] = useState(true); // Sidebar open by default
+  const isEconPage = location.pathname === "/econ";
+
+  const [isRightSidebarVisible, setIsRightSidebarVisible] = useState(
+    !isEconPage
+  );
 
   const handleUploadClick = () => {
     console.log("Upload button clicked!");
-    // Add upload functionality here
   };
 
-  const toggleRightSidebar = () => {
-    setRightSidebarVisible(!isRightSidebarVisible);
+  const onToggleSidebar = () => {
+    setIsRightSidebarVisible((prev) => !prev);
   };
-
-  useEffect(() => {
-    // If navigating to /econ page, hide the Right Sidebar
-    if (isEconPage) {
-      setRightSidebarVisible(false);
-    }
-  }, [isEconPage]);
 
   return (
     <div className="layout-container">
-      {/* Top Bar */}
       <TopBar
+        onUploadClick={handleUploadClick}
         showUploadButton={isEconPage}
-        onUploadClick={isEconPage ? handleUploadClick : undefined}
-        onToggleSidebar={toggleRightSidebar}
+        onToggleSidebar={onToggleSidebar}
       />
 
-      <div className="layout-body">
-        {/* Left Sidebar */}
-        <LeftSidebar />
+      {/* Left Sidebar Fixed */}
+      <LeftSidebar />
 
-        {/* Main Content */}
-        <div
-          className={`layout-content ${
-            isRightSidebarVisible && !isEconPage
-              ? "with-right-sidebar"
-              : "no-right-sidebar"
-          }`}
-        >
-          <Outlet /> {/* Renders child routes here */}
-        </div>
-
-        {/* Right Sidebar is open by default */}
-        {!isEconPage && isRightSidebarVisible && <RightSidebar />}
+      {/* Main Content Area */}
+      <div
+        className={`layout-content ${
+          isRightSidebarVisible ? "with-right-sidebar" : "no-right-sidebar"
+        }`}
+      >
+        <Outlet />
       </div>
+
+      {/* Conditionally Render Right Sidebar */}
+      {isRightSidebarVisible && !isEconPage && <RightSidebar />}
     </div>
   );
 };

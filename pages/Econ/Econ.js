@@ -1,18 +1,18 @@
-// src/pages/Econ.js
+// src/pages/Econ/Econ.js
 import React from "react";
-import Data from "../components/Data"; // Import your Data component
+import Data from "./Data"; // Ensure the path to Data is correct
+//import "./Econ.css"; // Optional: Import styles specific to Econ page
 
 const Econ = () => {
   // Function to handle upload button click
   const handleUploadClick = () => {
     console.log("Upload button clicked!");
-    // Add your upload functionality here
+    // Implement upload functionality here
   };
 
   return (
     <div className="econ-container">
-      {/* TopBar for Econ page, conditionally with upload functionality */}
-
+      {/* If you need to use TopBar-specific features, they should be handled via Layout's props */}
       <div className="content">
         {/* Render the Data component */}
         <Data />

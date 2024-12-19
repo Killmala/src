@@ -1,23 +1,26 @@
+// src/App.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Index from "./pages/Index";
-import Ping from "./pages/Ping";
-import Profile from "./pages/Profile";
-import Econ from "./pages/Econ";
-import Timeline from "./pages/Timeline";
-import Settings from "./pages/Settings";
+import Layout from "./components/Layout"; // Ensure this path is correct
+import Index from "./pages/Index/Index";
+import Ping from "./pages/Ping/Ping";
+import Profile from "./pages/Profile/Profile";
+import Econ from "./pages/Econ/Econ";
+import Timeline from "./pages/Timeline/Timeline";
+import Settings from "./pages/Settings/Settings";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Index />} />
+        <Route index element={<Index />} />{" "}
+        {/* This corresponds to the "/" path */}
         <Route path="ping" element={<Ping />} />
-         <Route path="econ" element={<Econ />} />
+        <Route path="econ" element={<Econ />} />
         <Route path="profile" element={<Profile />} />
         <Route path="timeline" element={<Timeline />} />
         <Route path="settings" element={<Settings />} />
+        {/* Add more routes here as needed */}
       </Route>
     </Routes>
   );

@@ -1,4 +1,4 @@
-// src/components/ContentArea.js
+// src/pages//Index/ContentArea.js
 import React from "react";
 
 const ContentArea = ({ contentType }) => {
