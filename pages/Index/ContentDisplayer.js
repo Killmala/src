@@ -1,16 +1,16 @@
 // src/components/ContentDisplayer.js
 import React from "react";
-import styles from "./ContentDisplayer.css"; // Import the CSS module
+import "./ContentDisplayer.css"; // now a regular CSS file
 
 const ContentDisplayer = ({ onContentTypeChange }) => {
   const contentTypes = ["All", "Videos", "Images", "Reading", "People"];
 
   return (
-    <div className={styles["content-displayer"]}>
+    <div className="content-displayer">
       {contentTypes.map((type) => (
         <button
           key={type}
-          className={styles["button"]} // Apply button styles
+          className="button"
           onClick={() => onContentTypeChange(type)}
         >
           {type}

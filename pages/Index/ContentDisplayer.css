@@ -2,27 +2,25 @@
 .content-displayer {
   display: flex;
   gap: 10px;
-  justify-content: center;
-  margin: 20px 0;
 }
 
 .content-displayer button {
   font-size: 16px; /* Adjust the font size */
   padding: 5px 10px; /* Make the buttons larger */
   border-radius: 8px; /* Round the corners */
-  border: 1px solid hsl(0, 0%, 100%); /* Border color */
-  background-color: hsl(0, 0%, 80%); /* Button background */
-  color: #333; /* Text color */
+  border: 1px solid hsl(0, 0%, 15%); /* Border color */
+  background-color: hsl(0, 0%, 10%); /* Button background */
+  color: hsl(0, 0%, 90%); /* Text color */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .content-displayer button:hover {
-  background-color: #007bff; /* On hover, change background */
-  color: white; /* Change text color on hover */
+  background-color: hsl(0, 0%, 15%); /* On hover, change background */
+  color: hsl(0, 0%, 90%); /* Change text color on hover */
 }
 
 .content-displayer button:focus {
   outline: none;
-  box-shadow: 0 0 5px #007bff; /* Add focus style */
+  box-shadow: 0 0 5px hsl(0, 0%, 90%); /* Add focus style */
 }

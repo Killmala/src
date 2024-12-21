@@ -1,6 +1,7 @@
 /*src/components/layout.css
 /* Overall container fills entire viewport */
 .layout-container {
+  color: hsl(0, 0%, 90%);
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +21,7 @@
   display: flex;
   align-items: center;
   background: hsl(0, 0%, 0%);
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   padding: 0 20px;
   box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.3);
 }
@@ -31,7 +32,7 @@
   top: 50px; /* Below top bar */
   left: 0;
   bottom: 0;
-  width: 200px; /* Adjust as needed */
+  width: 100px; /* Adjust as needed */
   background: hsl(0, 0%, 10%);
   overflow-y: auto;
 }
@@ -42,7 +43,7 @@
   top: 50px;
   right: 0;
   bottom: 0;
-  width: 220px; /* Adjust as needed */
+  width: 200px; /* Adjust as needed */
   background: hsl(0, 0%, 10%);
   overflow-y: auto;
 }
@@ -51,11 +52,11 @@
 .layout-content {
   position: absolute;
   top: 50px; /* below the top bar */
-  left: 200px; /* after left sidebar width */
+  left: 100px; /* after left sidebar width */
   bottom: 0;
   overflow-y: auto;
   background: hsl(0, 0%, 15%);
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 }
 

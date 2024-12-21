@@ -7,11 +7,3 @@
   background-color: hsl(0, 0%, 15%);
   color: hsl(0, 0%, 90%);
 }
-
-.content-area {
-  margin-top: 20px;
-  border: 1px solid hsl(0, 0%, 30%);
-  border-radius: 8px;
-  padding: 16px;
-  background-color: hsl(0, 0%, 20%);
-}
