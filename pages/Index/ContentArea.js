@@ -2,6 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./ContentArea.css";
+import ContentCard from "./ContentCard";
 
 const getClassNameForContentType = (contentType) => {
   // Map content types to specific styling classes
@@ -36,7 +37,7 @@ const ContentArea = ({ contentType, content }) => {
         <ul className="content-list">
           {filteredContent.map((item, index) => (
             <li key={index} className="content-item">
-              {item.title}
+              <ContentCard title={item.title} />
             </li>
           ))}
         </ul>
