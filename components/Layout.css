@@ -53,6 +53,7 @@
   position: absolute;
   top: 50px; /* below the top bar */
   left: 100px; /* after left sidebar width */
+  right: 0; /* take up all remaining space */
   bottom: 0;
   overflow-y: auto;
   background: hsl(0, 0%, 15%);

@@ -23,9 +23,10 @@ const TopBar = ({ onUploadClick, showUploadButton, onToggleSidebar }) => {
               />
             </button>
           </div>
-        ) : (
+        ) : null}
+        {!showUploadButton && onToggleSidebar && (
           <div className="content-option" id="Sub-bar">
-            {/* Sidebar toggle button. Ensure it triggers onToggleSidebar */}
+            {/* Sidebar toggle button */}
             <button onClick={onToggleSidebar}>&#9776;</button>
           </div>
         )}

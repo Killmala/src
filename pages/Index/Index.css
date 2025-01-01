@@ -1,9 +1,0 @@
-.index-page {
-  display: flex;
-  flex-direction: column;
-  /* Ensure it expands to fill its parent (layout-content) if needed */
-  width: 100%;
-  height: 100%;
-  background-color: hsl(0, 0%, 15%);
-  color: hsl(0, 0%, 90%);
-}
