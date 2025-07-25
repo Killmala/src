@@ -8,6 +8,7 @@ import Profile from "./pages/Profile/Profile";
 import Econ from "./pages/Econ/Econ";
 import Timeline from "./pages/Timeline/Timeline";
 import Settings from "./pages/Settings/Settings";
+import SignUp from "./pages/SignUp/SignUp";
 import NotFound from "./pages/NotFound/NotFound"; // Ensure this path is correct
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="econ" element={<Econ />} />
         <Route path="profile" element={<Profile />} />
         <Route path="timeline" element={<Timeline />} />
+        <Route path="signup" element={<SignUp />} />
         <Route path="settings" element={<Settings />} />
         {/* Add more routes here as needed */}
         <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
